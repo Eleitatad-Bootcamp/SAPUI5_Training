@@ -5,6 +5,15 @@ sap.ui.define([
 
     return Controller.extend("com.acn.training.firstproject.controller.mainview", {
         onInit() {
+        },
+        onClearPress: function () {
+            // Clear text fields
+            this.byId("nameInput").setValue("");
+            this.byId("streetInput").setValue("");
+            this.byId("cityInput").setValue("");
+        
+            // Clear ComboBox selection
+            this.byId("box0").setSelectedKey(null);
         }
     });
 });
